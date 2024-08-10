@@ -245,7 +245,7 @@ bot.on("contact", async (msg) => {
       contact.phone_number.startsWith("998")) &&
     contact.user_id === userId
   ) {
-    addUser({ id: userId, nick: contact?.first_name, ball: 0, ref: 0 });
+    addUser({ id: userId, nick: contact.first_name, ball: 0, ref: 0 });
     await bot.sendMessage(chatId, `Qabul qilindi ${contact.phone_number}`);
   } else {
     await bot.sendMessage(
